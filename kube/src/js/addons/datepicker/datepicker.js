@@ -403,7 +403,8 @@
     	// CONVERT
     	_convertDateToFormat: function(obj)
     	{
-    		var formated = this.params.format.replace('%d', obj.day);
+    		var day = this._addZero(obj.day);
+    		var formated = this.params.format.replace('%d', day);
     		formated = formated.replace('%F', this.lang.get('months')[obj.month]);
     		formated = formated.replace('%m', this._addZero(obj.month));
     		formated = formated.replace('%M', this.lang.get('months-short')[obj.month]);
