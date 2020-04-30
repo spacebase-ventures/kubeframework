@@ -23,6 +23,7 @@ $autocomplete-border-color: transparent !default;
     border-bottom-right-radius: $autocomplete-border-radius;
     border: $autocomplete-border-width $autocomplete-border-style $autocomplete-border-color;
     overflow: auto;
+    z-index: $z-over-all;
 
     & a {
         font-size: $font-size-ui;
