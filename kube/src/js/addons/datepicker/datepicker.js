@@ -248,13 +248,13 @@
     			right = (windowWidth - (left + width));
     		}
 
-    		if ((top + datepickerHeight) > documentHeight)
-    		{
-    			this.params.animationOpen = 'show';
-    			this.params.animationClose = 'hide';
+    		// if ((top + datepickerHeight) > documentHeight)
+    		// {
+    		// 	this.params.animationOpen = 'show';
+    		// 	this.params.animationClose = 'hide';
 
-    			top = (top - datepickerHeight - height - 2);
-    		}
+    		// 	top = (top - datepickerHeight - height - 2);
+    		// }
 
     		this.position.top = top;
     		this.position.left = left;
