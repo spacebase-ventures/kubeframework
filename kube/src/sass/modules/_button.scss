@@ -50,7 +50,8 @@
         outline: none;
     	text-decoration: none;
     	color: $button-default-color-text;
-    	background-color: lighten($button-default-background, 10%);
+    	// background-color: lighten($button-default-background, 10%);
+        background-color: $color-button-lighten;
     }
     // Disabled
     &:disabled,
