@@ -118,7 +118,7 @@ $color-warning: $color-orange !default;
 
 // Accent
 $color-accent: $color-red !default;
-$color-highlight: rgba($color-focus, .1) !default;
+$color-highlight: rgba($color-focus-rgb, .1) !default;
 
 // Button
 $color-button: #0c3dd7 !default;
@@ -210,7 +210,7 @@ $blockquote-line-height: $base-line-big;
 $blockquote-color-text: $color-text-secondary !default;
 $blockquote-padding: .4em 0 .4em 1rem !default;
 $blockquote-border: none !default;
-$blockquote-border-left: 3px solid rgba($color-focus, .6) !default;
+$blockquote-border-left: 3px solid rgba($color-focus-rgb, .6) !default;
 
 // pre
 $pre-font-size: $font-size-small !default;
@@ -259,8 +259,8 @@ $alert-success-color-text: $color-success !default;
 $alert-success-link-color-hover: $color-black !default;
 
 // focus
-$alert-focus-background: rgba($color-focus, .07) !default;
-$alert-focus-border-color: rgba($color-focus, .3) !default;
+$alert-focus-background: rgba($color-focus-rgb, .07) !default;
+$alert-focus-border-color: rgba($color-focus-rgb, .3) !default;
 $alert-focus-color-text: $color-focus !default;
 $alert-focus-link-color-hover: $color-black !default;
 
@@ -345,8 +345,8 @@ $input-focus-background: #fff !default;
 $input-focus-color-text: inherit !default;
 $input-focus-border-width: 1px !default;
 $input-focus-border-style: solid !default;
-$input-focus-border-color: rgba($color-focus, .5) !default;
-$input-focus-box-shadow: 0 0 3px rgba($color-focus, .5) inset !default;
+$input-focus-border-color: rgba($color-focus-rgb, .5) !default;
+$input-focus-box-shadow: 0 0 3px rgba($color-focus-rgb, .5) inset !default;
 
 // error
 $input-error-background: rgba($color-error, .05) !default;
