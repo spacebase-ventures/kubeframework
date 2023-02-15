@@ -121,7 +121,7 @@
 
     		var now = new Date();
     		var start = (this.params.startDate) ? this.params.startDate.year : (now.getFullYear() - 99);
-    		var end = (this.params.endDate) ? this.params.endDate.year : now.getFullYear();
+    		var end = (this.params.endDate) ? this.params.endDate.year : (now.getFullYear() + 99);
 
             if ((end - start) < 2)
     		{
