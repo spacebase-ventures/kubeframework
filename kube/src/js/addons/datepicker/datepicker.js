@@ -390,9 +390,6 @@
                 }
             }
 
-            console.log(date);
-            console.log(format);
-
             // Example input/output:
 
             // format
