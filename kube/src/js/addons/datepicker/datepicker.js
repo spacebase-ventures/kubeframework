@@ -372,20 +372,38 @@
     		var obj = {};
 			var date = str.match(this.dateRegexp);
 			var format = this.params.format.match(this.dateRegexp);
+            var dayIndex = 1;
+            var monthIndex = 3;
+            var yearIndex = 4;
+            // find index of day, month, year so %Y-%m-%d input format works
+            if (format) {
+                for (var i = 0; i < format.length; i++) {
+                    if (format[i] === '%d') {
+                        dayIndex = i;
+                    }
+                    if (format[i] === '%m' || format[i] === '%M' || format[i] === '%F') {
+                        monthIndex = i;
+                    }
+                    if (format[i] === '%y' || format[i] === '%Y') {
+                        yearIndex = i;
+                    }
+                }
+            }
 
-			obj.year = (date === null) ? this.today.year : parseInt(date[4]);
+            console.log(date);
+            console.log(format);
 
-			if (format[1] === '%m' || format[1] === '%M' || format[1] === '%F')
-			{
-				obj.month = (date === null) ? this.today.month : this._parseMonth(format[1], date[1]);
-				obj.day = (date === null) ? false : parseInt(date[3]);
-			}
-			else
-			{
-				obj.month = (date === null) ? this.today.month : this._parseMonth(format[3], date[3]);
-				obj.day = (date === null) ? false : parseInt(date[1]);
-			}
+            // Example input/output:
 
+            // format
+            // ['%d/%m/%Y', '%d', '/', '%m', '%Y', index: 0, input: '%d/%m/%Y', groups: undefined]
+
+            // date
+            // ['01/01/2019', '01', '/', '01', '2019', index: 0, input: '01/01/2019', groups: undefined]
+
+			obj.year = (date === null) ? this.today.year : parseInt(date[yearIndex]);
+            obj.month = (date === null) ? this.today.month : this._parseMonth(format[monthIndex], date[monthIndex]);
+			obj.day = (date === null) ? false : parseInt(date[dayIndex]);
 			obj.splitter = (date === null) ? '.' : date[2];
 
     		return obj;
