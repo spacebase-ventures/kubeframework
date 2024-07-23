@@ -149,6 +149,8 @@
 
         if ($target.get().tagName === "INPUT") {
           $target.val(date);
+          // Trigger "change" event
+          $target.get().dispatchEvent(new Event());
         } else {
           $target.text(date);
         }
